@@ -1,0 +1,206 @@
+/* Estilos para centrar el input y el botón */
+.search-container {
+    text-align: center;
+    /* Centra el contenido del contenedor */
+    margin-top: 20px;
+    /* Ajusta al gusto */
+}
+
+#searchInput {
+    width: 70%;
+    /* Ajusta el ancho al 60% del contenedor */
+    padding: 20px;
+    /* Añade un padding para aumentar el tamaño visualmente */
+    font-size: 1em;
+    /* Ajusta el tamaño de la fuente */
+    margin: 10px 0;
+    /* Añade un margen superior e inferior */
+    display: inline-block;
+    /* Hace que el elemento se muestre en línea */
+    border: 2px solid #007bff;
+    /* Añade un borde al input */
+    border-radius: 10px;
+    /* Añade bordes redondeados al input */
+    margin: 0 auto;
+    /* Centra los elementos horizontalmente */
+    display: inline-block;
+    /* Mantiene los elementos en la misma línea */
+}
+
+#searchButton {
+    width: 20%;
+    /* Ajusta el ancho para que sea más pequeño */
+    padding: 20px 10px;
+    /* Añade un padding para aumentar el tamaño visualmente */
+    font-size: 1em;
+    /* Ajusta el tamaño de la fuente */
+    margin: 10px 0;
+    /* Añade un margen superior e inferior */
+    display: inline-block;
+    /* Hace que el elemento se muestre en línea */
+    cursor: pointer;
+    /* Cambia el cursor a un puntero para indicar que es clickeable */
+    background-color: #007bff;
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto del botón */
+    border: none;
+    /* Elimina el borde del botón */
+    border-radius: 10px;
+    /* Añade bordes redondeados al botón */
+    vertical-align: top;
+    /* Alinea verticalmente con el input */
+    margin: 0 auto;
+    /* Centra los elementos horizontalmente */
+    display: inline-block;
+    /* Mantiene los elementos en la misma línea */
+}
+
+#searchButton:hover {
+    background-color: #034f84;
+    /* Cambia el color de fondo para el hover a un azul más oscuro */
+    color: #edf2f8;
+    /* Cambia el color del texto para el hover a un amarillo */
+    transform: translateY(-5px);
+    /* Mueve el botón hacia arriba para dar un efecto de elevación */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    /* Añade una sombra más pronunciada para dar profundidad */
+}
+
+/* Ajustes para dispositivos más pequeños */
+@media (max-width: 768px) {
+
+    #searchInput,
+    #searchButton {
+        width: 90%;
+        /* Aumenta el ancho al 90% para dispositivos más pequeños */
+        display: block;
+        /* Hace que cada elemento ocupe su propia línea */
+        margin-bottom: 10px;
+        /* Añade un margen inferior para separar los elementos */
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+span {
+    position: relative;
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 20ch;
+    animation: typing 2s steps(15), blink .5s infinite step-end alternate, gradient 3s infinite linear;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+    color: black;
+    top: 5px;
+    font-size: 8vw;
+    background: linear-gradient(90deg,
+            rgb(86, 134, 170) 0%,
+            rgb(237, 242, 248) 14.28%,
+            rgb(191, 214, 232) 28.56%,
+            rgb(136, 180, 215) 42.84%,
+            rgb(45, 93, 122) 57.12%,
+            rgb(46, 93, 127) 71.4%,
+            rgb(188, 213, 236) 85.68%);
+    background-size: 200% 100%;
+    background-clip: text;
+    color: transparent;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 65%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.pokemon-info {
+    width: 80vw;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-image: url(https://i.pinimg.com/474x/eb/6e/41/eb6e41a4eba49eca7d9fb3955013723c.jpg);
+    text-align: center;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    perspective: 1000px;
+}
+.pokemon-info img {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    background-color: white;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0px;
+}
+
+.pokemon-info h2 {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: black;
+}
+
+.pokemon-details {
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-info:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pokemon-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+@media screen and (min-width: 600px) {
+    #pokemon-info {
+        width: 50vw;
+    }
+}
